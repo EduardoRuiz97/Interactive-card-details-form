@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+  <link rel="stylesheet" href="card.css">
+  <title>Frontend Mentor | Interactive card details form</title>
+</head>
+<body>
+
+  <main class="main__container">
+
+    <section class="card__section__container">
+    
+      <img src="./bg-card-back.png" alt="bg-card-back" class="card__blank">
+      <p class="card__cvv">000</p>
+
+      <div class="card__container">
+        <img src="./card-logo.svg" alt="card__logo" class="card__container__logo">
+        <p class="card__container__number">0000 0000 0000 0000</p>
+
+        <div class="card__container__info__data">
+          <p class="card__container__name">JANE APPLESEED</p>
+          <p class="card__container__ed">00/00</p>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="main__container__info__active">
+
+      <form action="" class="card__info__container">
+
+        <div class="card__info__item">
+          <label for="" class="item__label">Cardholder Name</label>
+          <input type="text" class="item__user__input" placeholder="e.g. Jane Appleseed" id="name">
+        </div>
+
+        <div class="card__info__item">
+          <label for="" class="item__label">Card Number</label>
+          <div class="input__section__activate">
+            <input type="number" class="item__user__input" placeholder="e.g. 1234 5678 9123 0000" id="card">
+            <p class="warning__text" id="wrong__card__number">Wrong format, numbers only or incomplete card number</p>
+          </div>
+        </div>
+
+        <div class="card__info__item" id="card__info__date">
+
+          <label for="" class="item__label">Exp. Date (MM/YY)</label>
+
+          <div class="input__section__activate" id="input__section__activate__mix">
+            <input type="number" class="item__user__input" placeholder="MM" id="month">
+
+            <input type="number" class="item__user__input" placeholder="YY" id="year">
+
+            <p class="warning__text" id="warning__text__activate__section">Can't be blank</p>
+          </div>
+
+        </div>
+
+        <div class="card__info__item" id="card__info__cv">
+
+          <label for="" class="item__label">CVC</label>
+
+          <div class="input__section__activate">
+            <input type="number" class="item__user__input" placeholder="e.g. 123" id="cvv">
+            <p class="warning__text" id="wrong__card__cvv">Can't be blank</p>
+            
+          </div>
+
+        </div>
+
+        <button class="card__info__submit">Confirm</button>
+
+      </form>
+      <!-- Completed state start -->
+      <section class="complete__state__section">
+        <img src="./icon-complete.svg" alt="" class="successfull__icon">
+        <h1 class="message__complete">THANK YOU!</h1>
+        <h2 class="complete__text">We've added your card details</h2>
+        <button class="continue__submit">Continue</button>
+      </section>
+    
+    </section>
+
+    <script src="verify-form.js"></script>
+  </main>
+  
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Eduardo Ruiz</a>.
+  </footer>
+
+</body>
+</html>
